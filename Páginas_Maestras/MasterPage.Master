@@ -1,0 +1,159 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Páginas_Maestras.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns =" http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>DeveloperSoft Inc.</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .nuevoEstilo1 {
+            vertical-align: top;
+            background-color: #c0c0c0;
+            width: 200px;
+            height: 300px;
+        }
+        .nuevoEstilo2 {
+            vertical-align: top;
+            background-color: ##7dd49b;
+            width: 45px;
+            height: 45px;
+            border-bottom-style: solid;
+            border-bottom-width: thick;
+            border-bottom-color: #57946c;
+        }
+        .nuevoEstilo3 {
+            vertical-align: top;
+            background-image: url('/Image/kappa.png');
+            width: 45px;
+            height: 45px;
+        
+        }
+        .auto-style2 {
+            background-image: url('/Image/kappa.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: auto;
+            height: 443px;
+
+        }
+        .nuevoEstilo6 {
+            
+            background-image: url('/Image/f.jpg');
+           
+            width: 45px;
+            height: 45px;
+            border-bottom-style: solid;
+            border-bottom-width: thick;
+            border-bottom-color: #336600;
+        }
+        .nuevoEstilo7 {
+            background-color: #f3ce72;
+            border-top-style: double;
+            border-top-width: thick;
+            border-top-color: #000000;
+        }
+        .nuevoEstilo8 {
+            font-size: xx-large;
+        }
+        .nuevoEstilo9 {
+            font-size: xx-large;
+        }
+        .nuevoEstilo8 {
+            font-size: xx-large;
+            text-transform: uppercase;
+            font-style: normal;
+            font-weight: bold;
+            text-align: center;
+            background-color: #7ac7c6;
+            width: 250px;
+        }
+        .nuevoEstilo10 {
+            font-weight: normal;
+            font-variant: normal;
+            font-size: large;
+            background-color: #DBDBDB;
+            text-align: center;
+            word-spacing: normal;
+            line-height: normal;
+            width: auto;
+            height: auto;
+        }
+        .nuevoEstilo11 {
+            font-size: large;
+            text-align: center;
+            text-transform: capitalize;
+            color: #57946C;
+            font-style: normal;
+        }
+        .auto-style3 {
+            font-size: xx-large;
+            text-transform: uppercase;
+            font-style: normal;
+            font-weight: bold;
+            text-align: center;
+            width: 250px;
+            margin-left: 40px;
+            background-color: #7ac7c6;
+        }
+        .nuevoEstilo12 {
+            background-color: #F7F7F7;
+            font-size: x-large;
+            height: 100px;
+            text-align: center;
+            border: thick double #88DEDC;
+        }
+        .auto-style4 {
+            background-color: #F7F7F7;
+            font-size: x-large;
+            height: 253px;
+            text-align: center;
+            border: thick double #88DEDC;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table class="auto-style1">
+            <tr>
+                <td colspan="2" class="nuevoEstilo2" id="head">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2" id="Head" class="auto-style2"></td>
+            </tr>
+            <tr>
+                <td class="auto-style3">
+                    <br />
+                    Menú<br />
+                    <asp:TreeView ID="TreeView1" runat="server" CssClass="nuevoEstilo11" DataSourceID="Web" ImageSet="BulletedList" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged" ShowExpandCollapse="False" Width="254px">
+                        <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+                        <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="0px" NodeSpacing="0px" VerticalPadding="0px" />
+                        <ParentNodeStyle Font-Bold="False" />
+                        <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
+                    </asp:TreeView>
+                    <asp:SiteMapDataSource ID="Web" runat="server" />
+                    <br />
+                </td>
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                        <p class="auto-style4">
+                            Demostración de Páginas Maestras</p>
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="nuevoEstilo7">Copyright © 2020 The Soft Inc</td>
+            </tr>
+        </table>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
